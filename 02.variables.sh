@@ -11,3 +11,7 @@ Name=$1
 Welcome=$2
 How=$3
 echo "Hello $1,$2,$3"
+
+echo "Please enter user name"
+read=Username
+echo "The user name is ${Username}"
