@@ -1,3 +1,3 @@
 echo "Please enter user name"
-read=$Username
+read -s Username
 echo "The user name is ${Username}"
