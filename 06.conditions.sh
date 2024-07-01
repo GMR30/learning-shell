@@ -8,11 +8,11 @@ else
   exit 127
 fi
 echo "Installing java"
-yum install java -y
-if [$? -eq 0]
+yum install lvm2 -y
+if [ $? -eq 0 ]
 then
-  echo "successfully installed java application."
+  echo "successfully installed lvm2 application."
 else
-  echo "We are NOT installed the requested Java application."
+  echo "We are NOT installed the requested lvm2 application."
   exit 127
 fi
