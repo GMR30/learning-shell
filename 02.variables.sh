@@ -9,4 +9,5 @@ echo "Hello todaY'S date is $DATE"
 #passing variable
 Name=$1
 Welcome=$2
-echo "Hello $1,$2"
+How=$3
+echo "Hello $1,$2,$3"
