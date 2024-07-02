@@ -1,6 +1,6 @@
 #!/bin/bash
 userid=$(id -u)
-Date=$(date + "%F-%H-%M-%S" )
+Date=$(date +"%F-%H-%M-%S")
 Log_File="$Date.log"
 if [ $userid -ne 0 ]
 then
