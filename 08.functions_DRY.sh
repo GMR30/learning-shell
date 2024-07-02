@@ -15,17 +15,17 @@ validate(){
   else
     echo "$2 ..is SUCCESS "
    fi
-}
-yum install git -y &>>Log_File
+          }
+yum install git -y &>>$Log_File
 validate $? "GIT installation"
 
-yum install java -y &>>Log_File
+yum install java -y &>>$Log_File
 validate $? "JAVA installation"
 
-yum install net-tools -y &>>Log_File
+yum install net-tools -y &>>$Log_File
 validate $? "NET-TOOLS installation"
 
-yum install wget -y &>>Log_File
+yum install wget -y &>>$Log_File
 validate $? "WGET installation"
 
 
