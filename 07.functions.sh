@@ -9,7 +9,7 @@ echo "installing Git"
 
 yum install git -y
 
-if [ $? -ne 0]
+if [ $? -ne 0 ]
 then
   echo "Git had failed to install"
   exit 127
