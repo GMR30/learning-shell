@@ -14,7 +14,7 @@ validate(){
     echo "$2 ..is SUCCESS "
    fi
 }
-yum install git -y
+yum install gitt -y
 validate $? "GIT installation"
 
 yum install java -y
