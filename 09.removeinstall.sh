@@ -17,13 +17,13 @@ validate(){
    fi
           }
 yum remove git -y &>>$Log_File
-validate $? "GIT installation"
+validate $? "GIT is UN-Installation "
 
 yum remove java -y &>>$Log_File
-validate $? "JAVA installation"
+validate $? "JAVA UN-Installation"
 
 yum remove net-tools -y &>>$Log_File
-validate $? "NET-TOOLS installation"
+validate $? "NET-TOOLS UN-Installation"
 
 yum remove wget -y &>>$Log_File
-validate $? "WGET installation"
+validate $? "WGET UN-Installation"
