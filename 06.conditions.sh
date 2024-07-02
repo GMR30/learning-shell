@@ -7,7 +7,7 @@ else
   echo "User has not root privileges"
   exit 127
 fi
-echo "Installing java"
+echo "Installing LVM"
 yum install lvm2 -y
 if [ $? -eq 0 ]
 then
