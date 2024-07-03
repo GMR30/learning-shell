@@ -13,10 +13,10 @@ fi
 validate(){
    if [ $1 -ne 0 ]
   then
-    echo "$2 ..is $R FAILED $N  "
+    echo -e "$2 ..is $R FAILED $N  "
     exit 127
   else
-    echo "$2 ..is $G SUCCESS $N "
+    echo -e  "$2 ..is $G SUCCESS $N "
    fi
           }
 yum install git -y &>>$Log_File
