@@ -16,6 +16,7 @@ fi
 #this is generic we need to pass the arguments.
 echo "$1"
 echo "$2"
+echo "$3"
 validate(){
    if [ $1 -ne 0 ]
       then
