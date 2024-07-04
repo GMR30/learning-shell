@@ -38,7 +38,7 @@ check_installed(){
 for Package in $@  #required packages you can to the input
   do
         check_installed $Package
-        if [$is_installed == "no"]
+        if [ $is_installed == "no" ]
           then
              echo -e "$Package $R NOT INSTALLED $N  "
              yum install $Package -y &>>$Log_File
