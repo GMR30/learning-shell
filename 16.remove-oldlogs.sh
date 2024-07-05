@@ -10,7 +10,7 @@ Input=$(find /home/ec2-user/dailylogs/ -type f -mtime  +14)
 echo -e "$G output is$N :${Input}" &>>$Log_File
 while IFS= read line;
 do
-  rm -rf  &>>$Log_File
+  /usr/bin/rm -rf  &>>$Log_File
   echo -e "$R Deleting the line:$N $line " &>>$Log_File
 done<<<"$Input"
 
