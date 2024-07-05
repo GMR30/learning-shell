@@ -1,5 +1,5 @@
 #!/bin/bash
-Date=$(date "%F-%H-%M-%S")
+Date=$(date +"%F-%H-%M-%S")
 Path=/home/ec2-user/dailylogs
 Log_File1="$Date.log"
 R="\e[31m"
