@@ -7,7 +7,7 @@ echo "output is :${input}"
 while IFS= read line;
 do
   #rm -rf  &>>$Log-File
-  echo "Deleting the line: $line"
+  echo "Deleting the line: $line"  >>$Log-File
 done<<<"$input"
 
 
