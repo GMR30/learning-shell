@@ -7,11 +7,11 @@ G="\e[32m"
 N="\e[0m"
 Y="\e[33m"
 Input=$(find /home/ec2-user/dailylogs/ -type f -mtime  +14)
-echo "$G output is$N :${Input}"
+echo -e "$G output is$N :${Input}"
 while IFS= read line;
 do
   #rm -rf  &>>$Log-File
-  echo -e "$R Deleting the line: $line $N"  &>>$Log_File1
+  echo -e "$R Deleting the line:$N $line "
 done<<<"$Input"
 
 
