@@ -11,13 +11,13 @@ do
   partition=$(echo $Disk_usage | cut -d "" -f2)
 #  echo "usage: $usage"
 #  echo "partition: $partition"
-  echo "Disk_usage:$Disk_usage"
+  echo -e "Disk_usage:$Disk_usage"
   if [ $usage -ge $Disk_threshold ]
   then
       message+="High disk usage on $partition: $usage%\n"
   fi
 done <<<"$Disk_usage"
 echo "message:$message"
-echo  "$message" | mail -s "High Disk usage" info@subbannadairy.com
+echo -e "$message" | mail -s "High Disk usage" info@subbannadairy.com
 
 
