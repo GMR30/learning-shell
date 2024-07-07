@@ -2,7 +2,7 @@
 #df -hT | grep -vE 'tmpfs|Filesystem' | awk '{print $6}'
 #df -hT | grep -vE 'tmpfs|Filesystem' | awk '{print $6}' | cut -d "%" -f1
 
-Disk_threshold=1
+Disk_threshold=10
 Disk_usage=$(df -hT | grep -vE 'tmpfs|Filesystem' | awk '{print $6 " " $1}' )
 message=""
 while IFS= read line;
