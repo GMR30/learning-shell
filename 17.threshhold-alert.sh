@@ -11,7 +11,7 @@ do
   partition==$(echo $Disk_usage | cut -d " " f2)
   echo "usage: $usage"
   echo "partition: $partition"
-  if[ $usage -ge $Disk_threshold ]
+  if [ $usage -ge $Disk_threshold ]
   then
       message+="High disk usage on $partition: $usage%\n"
   fi
