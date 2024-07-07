@@ -16,7 +16,7 @@ do
       message+="High disk usage on $partition: $usage%\n"
   fi
 done<<<"$Disk_usage"
-  echo "message:$message"
-  echo -e "$message" | mail -s "High Disk usage" info@subbannadairy.com
+echo "message:$message"
+echo -e "$message" | mail -s "High Disk usage" info@subbannadairy.com
 
 
