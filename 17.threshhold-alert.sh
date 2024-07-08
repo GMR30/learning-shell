@@ -2,13 +2,13 @@
 #df -hT | grep -vE 'tmpfs|Filesystem' | awk '{print $6}'
 #df -hT | grep -vE 'tmpfs|Filesystem' | awk '{print $6}' | cut -d "%" -f1
 
-Disk_threshold=20
+Disk_threshold=10
 Disk_usage=$(df -hT | grep -vE 'tmpfs|Filesystem' | awk '{print $6 " " $1}' )
 message=""
 while IFS= read line;
 do
   usage=$(echo $line | cut -d "%" -f1)
-  partition=$(echo $Disk_usage | cut -d "" -f2)
+  partition=$(echo $Disk_usage | cut -d " " -f2)
    echo "usage: $usage"
    echo "partition: $partition"
   #echo -e "Disk_usage:$Disk_usage"
