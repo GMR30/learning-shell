@@ -2,20 +2,17 @@
 #df -hT | grep -vE 'tmpfs|Filesystem' | awk '{print $6}'
 #df -hT | grep -vE 'tmpfs|Filesystem' | awk '{print $6}' | cut -d "%" -f1
 
-Disk_threshold=20
-Disk_usage=$(top -bn1 | awk '/Cpu/ { print $2}' )
+cpu_threshold=20
+cpu_usage=$(top -bn1 | awk '/Cpu/ { print $2}' )
 message=""
 while IFS= read line;
 do
-  usage=$(echo $line | cut -d "%" -f1)
-  partition=$(echo $line | cut -d " " -f2)
+   usage=$(echo $line)
    echo "usage: $usage"
-   echo "partition: $partition"
-  #echo -e "Disk_usage:$Disk_usage"
-  if [ $usage -ge $Disk_threshold ]
+  if [ $usage -ge $cpu_threshold ]
   then
-      message+="High disk usage on $partition:$usage%\n "
+      message+="High cpu usage on: $usage%\n "
   fi
-done <<<"$Disk_usage"
+done <<<"$cpu_usage"
 echo "message:$message"
-echo -e "$message" | mail -s "High Disk usage" raj@subbannadairy.com
+echo -e "$message" | mail -s "High cpu usage" raj@subbannadairy.com
