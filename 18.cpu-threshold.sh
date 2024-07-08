@@ -5,7 +5,6 @@
 cpu_threshold=10
 cpu_usage=$(top -bn1 | awk '/Cpu/ { print $2}' )
 v=$cpu_usage
-echo "cpu_usage:$cpu_usage"
 s=${v/\.*/}
 echo $s
 message=""
