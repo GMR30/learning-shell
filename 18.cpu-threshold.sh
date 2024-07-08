@@ -12,7 +12,7 @@ while IFS= read line;
 do
    usage=$(echo $line)
    echo "cpu-usage: $usage"
-  if [ $usage -ge $cpu_threshold ]
+  if [ $usage -ge $s ]
   then
       message+="High cpu usage on: $usage%\n "
   fi
