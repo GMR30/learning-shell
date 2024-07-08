@@ -4,14 +4,17 @@
 
 cpu_threshold=10
 cpu_usage=$(top -bn1 | awk '/Cpu/ { print $2}' )
-v=$cpu_usage
-s=${v/\.*/}
-echo $s
+#v=$cpu_usage
+#s=${v/\.*/}
+#echo $s
 message=""
 while IFS= read line;
 do
    usage=$(echo $line)
    echo "cpu-usage: $usage"
+   v=$usage
+   s=${v/\.*/}
+   echo $s
   if [ $usage -ge $s ]
   then
       message+="High cpu usage on: $usage%\n "
