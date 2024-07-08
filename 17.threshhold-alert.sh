@@ -8,10 +8,10 @@ message=""
 while IFS= read line;
 do
   usage=$(echo $line | cut -d "%" -f1)
-  partition=$(echo $line | cut -d "" -f2)
-#  echo "usage: $usage"
-#  echo "partition: $partition"
-  echo -e "Disk_usage:$Disk_usage"
+  partition=$(echo $Disk_usage | cut -d "" -f2)
+   echo "usage: $usage"
+   echo "partition: $partition"
+  #echo -e "Disk_usage:$Disk_usage"
   if [ $usage -ge $Disk_threshold ]
   then
       message+="High disk usage on $partition: $usage%\n"
