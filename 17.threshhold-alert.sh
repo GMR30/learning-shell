@@ -14,10 +14,10 @@ do
   #echo -e "Disk_usage:$Disk_usage"
   if [ $usage -ge $Disk_threshold ]
   then
-      message+="High disk usage on $partition:$usage% \n "
+      message+="High disk usage on $partition:$usage%\n "
   fi
 done <<<"$Disk_usage"
 echo "message:$message"
-echo -e "$message" | mail -s "High Disk usage" raj@subbannadairy.com
+printf "$message" | mail -s "High Disk usage" raj@subbannadairy.com
 
 
