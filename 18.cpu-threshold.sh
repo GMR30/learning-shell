@@ -17,7 +17,7 @@ do
    echo $s
   if [ $s -ge $cpu_threshold ]
   then
-      message+="High cpu usage on: $usage%\n "
+      message+="High cpu usage on: $s "
   fi
 done <<<"$cpu_usage"
 echo "message:$message"
