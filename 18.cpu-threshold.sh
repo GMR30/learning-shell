@@ -15,7 +15,7 @@ do
    v=$usage
    s=${v/\.*/}
    echo $s
-  if [ $usage -ge $s ]
+  if [ $s -ge $cpu_threshold ]
   then
       message+="High cpu usage on: $usage%\n "
   fi
