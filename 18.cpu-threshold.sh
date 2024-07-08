@@ -2,9 +2,12 @@
 #df -hT | grep -vE 'tmpfs|Filesystem' | awk '{print $6}'
 #df -hT | grep -vE 'tmpfs|Filesystem' | awk '{print $6}' | cut -d "%" -f1
 
-cpu_threshold=20
+cpu_threshold=10
 cpu_usage=$(top -bn1 | awk '/Cpu/ { print $2}' )
+v=$cpu_usage
 echo "cpu_usage:$cpu_usage"
+s=${v/\.*/}
+echo $s
 message=""
 while IFS= read line;
 do
